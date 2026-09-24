@@ -410,12 +410,12 @@ st.markdown(
 | **Das LP genügt** | Die Pfad-Mengen dürfen Bruchteile sein. Ganzzahlige Pfade brauchen **Branch-and-Price** (Verzweigen im Master, Pricing bleibt kürzester Weg mit angepassten Längen) - hier nicht gebaut. |
 | **Ein exaktes LP ist nötig** | Für sehr große Netze genügt oft ein guter Fluss mit Garantie und ganz ohne LP-Löser. **Ansatzpunkt: Garg–Könemann** (gebaut: garg-koenemann-demo): dieselben Kürzeste-Wege-Orakel, multiplikative Gewichte statt Duallösung. |
 | **Pfade sind billig zu beschreiben** | Pfadlängen, Fahrzeitfenster oder Umschlagszahlen je Pfad machen das Pricing zum beschränkten kürzesten Weg - schwerer, aber genau dafür ist die Pfad-Formulierung da. Hier: nur Kosten. |
-| **Die Kanten stehen fest** | Hier gibt es die Kanten; wer sie erst bauen muss, zahlt Fixkosten. **Ansatzpunkt:** Netzwerkdesign mit Fixkosten (Benders-Zerlegung, Slope Scaling). |
+| **Die Kanten stehen fest** | Hier gibt es die Kanten; wer sie erst bauen muss, zahlt Fixkosten. **Ansatzpunkt:** Netzwerkdesign mit Fixkosten (gebaut: fixkosten-netzdesign-demo; danach Benders-Zerlegung, Slope Scaling). |
 | **Der Master ist billig** | scipy startet jeden Master neu (kein Warmstart), Preise zappeln bei degenerierten LPs. Produktive Löser warmstarten und stabilisieren die Preise; hier zeigt das Experiment, dass die Glättung nicht hilft. |
 | **Keine Zeit** | Ein Fluss ist eine Momentaufnahme. **Ansatzpunkt:** Zeit-Raum-Netz in der Demo „leercontainer-demo“. |
 """
 )
-st.caption("Die Netzwerkfluss-Linie ist als Ganzes geplant: Edmonds-Karp, Dinic, Push-Relabel, Successive Shortest Paths, Cycle-Canceling, Cost Scaling, Mehrgüterfluss (gebaut), Column Generation (dieses Stück), Garg-Könemann, Fixkosten-Netzwerkdesign, Benders-Zerlegung und Slope Scaling - bisher sind die ersten neun gebaut.")
+st.caption("Die Netzwerkfluss-Linie ist als Ganzes geplant: Edmonds-Karp, Dinic, Push-Relabel, Successive Shortest Paths, Cycle-Canceling, Cost Scaling, Mehrgüterfluss (gebaut), Column Generation (dieses Stück), Garg-Könemann, Fixkosten-Netzwerkdesign (gebaut), Benders-Zerlegung und Slope Scaling - bisher sind die ersten zehn gebaut.")
 
 st.markdown("---")
 

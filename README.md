@@ -9,7 +9,7 @@ Das **Pricing** ist ein gewöhnlicher **kürzester Weg** (Dijkstra) mit Kantenl�
 Vehikel: das Distributionsnetz der Vorgänger-Demos (Standard, Seed 155), ein **Streckennetz** (Gitter mit Start-Ziel-Aufträgen, auf dem die Pfade explodieren) und zwei feste Lehrnetze (die Preis-Wende und das Frachtnetz mit Bruch).
 
 **Einordnung in die Reihe (die Kanten des Graphen):** Die Entkopplung durch Preise aus dem Vorgänger lieferte den richtigen Wert, aber Einzelflüsse, die in etwa 69 % der Netze Kanten überlasteten. Jeder dieser Einzelflüsse ist ein Pfad; der Master mischt die Pfade zu einer **zulässigen** Lösung – das ist die Dantzig-Wolfe-Zerlegung des Mehrgüterflusses. Das Pricing ist der Ein-Gut-Fluss der ersten Stücke mit Preisen (hier Dijkstra mit nichtnegativen Längen).
-Die Folgestücke: **Garg–Könemann** (dieselben Kürzeste-Wege-Orakel, aber ohne LP-Löser und mit Güte-Garantie) und das **Netzwerkdesign mit Fixkosten** (Benders-Zerlegung, Slope Scaling). Bisher gebaut: die ersten neun Stücke.
+Die Folgestücke: **Garg–Könemann** (dieselben Kürzeste-Wege-Orakel, aber ohne LP-Löser und mit Güte-Garantie) und das **Netzwerkdesign mit Fixkosten** (Benders-Zerlegung, Slope Scaling). Bisher gebaut: die ersten zehn Stücke.
 ```
 edmonds-karp-demo (Wurzel: Restgraph, Rückkanten, Max-Flow = Min-Cut)                  [gebaut]
   ├─ dinic-demo (viele kürzeste Wege je Phase: Niveaugraph, blockierender Fluss)        [gebaut]
@@ -21,7 +21,9 @@ edmonds-karp-demo (Wurzel: Restgraph, Rückkanten, Max-Flow = Min-Cut)          
        └─ multicommodity-demo (mehrere Güter teilen Kapazität: Kanten-LP, Preise)       [gebaut]
             ├─ mcf-column-generation-demo (Pfade als Spalten, Pricing = Dijkstra)       [dieses Stück]
             ├─ garg-koenemann-demo (Näherung mit Preisen, ohne LP-Löser)                [gebaut]
-            └─ Fixkosten-Netzwerkdesign → Benders-Zerlegung, Slope Scaling              [geplant]
+            └─ fixkosten-netzdesign-demo (Fixkosten: Schranke und Schnitte)             [gebaut]
+                 ├─ Benders-Zerlegung (Entwurf im Master, Fluss im Teilproblem)         [geplant]
+                 └─ Slope Scaling (Heuristik für große Netze)                           [geplant]
 ```
 
 ## Ergebnis (Zahlen aus den Tests)
