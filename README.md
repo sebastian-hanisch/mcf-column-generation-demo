@@ -1,6 +1,6 @@
 # Pfad-Formulierung und Column Generation – nur die Pfade, die sich lohnen – Streamlit-Demo
 
-*(noch nicht deployed)*
+**[→ Demo live ausprobieren](https://sebastianhanisch-mcf-column-generation-demo.streamlit.app/)**
 
 Achtes Stück der **Netzwerkfluss-Linie** der "Konzepte"-Reihe für die Website "Sebastian Hanisch – Operations Research und Machine Learning", zweites im Mehrgüter-Ast, Konvergenz aus [Mehrgüterfluss](https://github.com/sebastian-hanisch/multicommodity-demo) und der Column Generation am Cutting-Stock-Problem (Demo `column-generation-demo`, dort ist das Pricing ein Rucksack, hier ein kürzester Weg):
 anders als die Fall-Demos im Portfolio (ein Anwendungsfall, mehrere Verfahren im Vergleich) zeigt diese Demo **ein** Verfahren – die **Column Generation über Pfade** – an einem wachsenden Beispiel.
