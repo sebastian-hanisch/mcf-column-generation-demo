@@ -113,3 +113,7 @@ venv\Scripts\python -m pytest tests -v
 
 Die Netze sind ganzzahlig; die Zielwerte der LPs werden mit Toleranz verglichen (nicht die Basis des Simplex), Runden und Iterationen nur mit Bändern. Ein Lauf dauert einige Minuten (Verteilungen über 100 Netze, Experimente).
 Die CI (`.github/workflows/tests.yml`) läuft auf Ubuntu mit Python 3.12, bei jedem Push und wöchentlich mit den jeweils neuesten Bibliotheksversionen.
+
+---
+
+Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). Mehr zur Reihe: [Netzwerkfluss: vom Max-Flow zum Netzdesign](https://sebastianhanisch.net/konzepte-netzwerkfluss.html).

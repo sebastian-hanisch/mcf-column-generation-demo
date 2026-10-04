@@ -374,7 +374,7 @@ else:
                    f"Die Glättung hilft nicht ({_f(a5['rounds'], 1)} bzw. {_f(a8['rounds'], 1)} Runden gegen {_f(base['rounds'], 1)}). Ohne die Preise der Gut-Obergrenzen enden nur {_share(neg['exact'])} der Netze im Optimum.")
 
 st.subheader("🔬 Spalten gegen mögliche Pfade")
-st.caption("Im dreistufigen Distributionsnetz gibt es je Gut nur wenige Dutzend Pfade. Ein Gitter hat exponentiell viele: hier das volle Gitter (jede Kante da) mit drei Gütern, 5 feste Netze je Größe.")
+st.caption("Im dreistufigen Distributionsnetz gibt es je Gut nur gut ein Dutzend Pfade (Standardeinstellungen: im Mittel 17, höchstens 48). Ein Gitter hat exponentiell viele: hier das volle Gitter (jede Kante da) mit drei Gütern, 5 feste Netze je Größe.")
 if st.button("Gitter von 3 × 3 bis 6 × 5 durchrechnen", key="paths_start"):
     st.session_state["paths_on"] = True
 if st.session_state.get("paths_on"):
@@ -446,6 +446,6 @@ st.markdown("---")
 
 st.caption(
     "Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – "
-    "Operations Research und Machine Learning. Interesse an einer maßgeschneiderten Lösung für "
-    "Ihr Unternehmen? [Kontakt aufnehmen](https://sebastianhanisch.net/kontakt.html)"
+    "Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). "
+    "Mehr zur Reihe: [Netzwerkfluss: vom Max-Flow zum Netzdesign](https://sebastianhanisch.net/konzepte-netzwerkfluss.html)."
 )
